@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function click_calcular() {
+
+            let peso = document.getElementById("txtPeso").value;
+
+            let altura = document.getElementById("txtAltura").value;
+
+            if (peso == "") {
+                alert("Informe seu Peso");
+
+            }
+
+            else if (altura == "") {
+                alert("Informe sua Altura");
+
+            }
+            else {
+                let soma = Number(peso) / (Number(altura) * Number(altura));
+                document.getElementById("txtIMC").value = soma.toFixed(2);
+            }
+        }
+
+        
+
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <form action="">
+
+            <div>
+                <label for="" id="genero">GENERO:</label><br>
+                <input type="radio" name="tdSEXO" id="txtFEM"> FEMININO: </input>
+                <input type="radio" name="tdSEXO" id="txtMASC"> MASCULINO: </input>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <label for="txtIdade">IDADE:</label>
+                <input type="text" name="idade" id="txtIdade">
+            </div>
+            <br>
+            <br>
+            <div>
+                <label for="txtPeso">PESO:</label>
+                <input type="number" name="" id="txtPeso" value="50">
+            </div>
+            <br>
+            <div>
+                <label for="txtAltura">ALTURA:</label>
+                <input type="number" name="" id="txtAltura" value="100">
+            </div>
+            <br>
+            <div>
+                <label for="txtIMC">IMC:</label>
+                <input type="text" name="" id="txtIMC">
+            </div>
+            <br>
+            <div>
+                <input type="button" value="Calcular" onclick="click_calcular()">
+
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
